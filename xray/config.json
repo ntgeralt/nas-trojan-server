@@ -1,0 +1,74 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 443,
+            "protocol": "trojan",
+            "settings": {
+                "clients": [
+                    {
+                        "password":"iampassword",
+                        "email": "love@v2fly.org"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "tls",
+                "tlsSettings": {
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/usr/syno/etc/certificate/_archive/11iTmy/cert.pem",
+                            "keyFile": "/usr/syno/etc/certificate/_archive/11iTmy/privkey.pem"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        "id": "972fe3d4-35fa-8ecb-5808-c6e5190ceee0"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ]
+}
